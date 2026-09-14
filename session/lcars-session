@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export WLR_RENDERER=pixman
+
+exec /usr/bin/sway -c "$HOME/.config/lcars-sway/config"

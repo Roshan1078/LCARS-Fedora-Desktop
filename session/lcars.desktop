@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=LCARS Desktop
+Comment=Custom Fedora LCARS Desktop Environment
+Exec=/usr/local/bin/lcars-session
+TryExec=/usr/local/bin/lcars-session
+Type=Application
+DesktopNames=LCARS;Sway

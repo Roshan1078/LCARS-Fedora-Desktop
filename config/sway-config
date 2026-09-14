@@ -1,0 +1,30 @@
+# LCARS DESKTOP - SWAY CONFIG
+
+set $mod Mod4
+
+# Black desktop background
+output * bg #000000 solid_color
+
+# Remove normal window borders
+default_border none
+default_floating_border none
+
+# Mouse behavior
+focus_follows_mouse no
+
+# Emergency terminal
+bindsym $mod+Return exec sh -c 'command -v ptyxis >/dev/null && exec ptyxis || command -v kgx >/dev/null && exec kgx || exec gnome-terminal'
+
+# Emergency logout from LCARS Desktop
+bindsym $mod+Shift+Escape exit
+
+# Kill currently focused app
+bindsym $mod+Shift+q kill
+
+# Launch our LCARS shell automatically
+exec python3 $HOME/lcars-shell/startup.py
+
+# LCARS workspace controls
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
